@@ -18,7 +18,6 @@ public class DRBMod implements ModInitializer {
 		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "creeper_heart"), CREEPER_HEART);
 
 
-
 		System.out.println("Hello Fabric world!");
 	}
 }

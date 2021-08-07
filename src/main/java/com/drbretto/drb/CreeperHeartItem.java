@@ -14,6 +14,7 @@ public class CreeperHeartItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        System.out.println("Creeper Heart Used!");
         return super.use(world, user, hand);
     }
 }

@@ -1,5 +1,5 @@
 {
-  "parent": "item/general",
+  "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "drb:item/creeper_heart"
   }
