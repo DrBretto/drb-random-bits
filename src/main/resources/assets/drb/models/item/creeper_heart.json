@@ -1,0 +1,6 @@
+{
+  "parent": "item/general",
+  "textures": {
+    "layer0": "drb:item/creeper_heart"
+  }
+}
