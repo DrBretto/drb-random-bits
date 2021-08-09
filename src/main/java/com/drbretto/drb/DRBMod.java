@@ -6,6 +6,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -16,6 +19,13 @@ import net.minecraft.util.registry.Registry;
 public class DRBMod implements ModInitializer {
 
 	public static final String MOD_ID = "drb";
+
+	public static final Enchantment BOOM_BOOM = new BoomBoomEnchantment(
+			Enchantment.Rarity.RARE,
+			EnchantmentTarget.WEAPON,
+			new EquipmentSlot[] {
+					EquipmentSlot.MAINHAND
+			});
 
 	public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier("drb", "group"), () -> new ItemStack(DRBMod.CREEPER_HEART));
 
@@ -33,6 +43,8 @@ public class DRBMod implements ModInitializer {
 		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_block"), GUNPOWDER_BLOCK_ITEM);
 
 		Registry.register( Registry.BLOCK, new Identifier(MOD_ID, "gunpowder_block"), GUNPOWDER_BLOCK);
+
+		Registry.register( Registry.ENCHANTMENT, new Identifier(MOD_ID, "boom_boom"), BOOM_BOOM);
 
 		System.out.println("Hello Fabric world!");
 	}
