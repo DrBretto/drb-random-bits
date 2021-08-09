@@ -9,15 +9,18 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.awt.*;
 import java.util.List;
 
 public class GunpowderBlock extends Block {
+
 
     public GunpowderBlock(Settings settings) {
         super(settings);
@@ -26,7 +29,7 @@ public class GunpowderBlock extends Block {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
 
-
+    tooltip.add(new TranslatableText("drb.gunpowder_block.flavor_text"));
 
         super.appendTooltip(stack, world, tooltip, options);
     }
@@ -38,9 +41,5 @@ public class GunpowderBlock extends Block {
         super.onLandedUpon(world, state, pos, entity, fallDistance);
     }
 
-    @Override
-    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-        System.out.println("Gunpowder Block placed!");
-        super.onPlaced(world, pos, state, placer, itemStack);
-    }
+
 }

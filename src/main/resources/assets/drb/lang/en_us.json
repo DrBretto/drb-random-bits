@@ -1,4 +1,5 @@
 {
   "item.drb.creeper_heart": "Creeper Heart <3",
-  "block.drb.gunpowder_block": "Gunpowder Block"
+  "block.drb.gunpowder_block": "Gunpowder Block",
+  "drb.gunpowder_block.flavor_text": "§2Catches §4fire §2if you jump on it"
 }
