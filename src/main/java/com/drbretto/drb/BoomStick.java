@@ -1,22 +1,28 @@
 package com.drbretto.drb;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
+import net.minecraft.inventory.StackReference;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
+import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.MiningToolItem;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.screen.slot.Slot;
+import net.minecraft.tag.Tag;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.ClickType;
+import net.minecraft.util.UseAction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class CreeperHeartItem extends Item {
-    public CreeperHeartItem(Settings settings) {
-        super(settings);
 
+public class BoomStick extends MiningToolItem {
+    protected BoomStick(float attackDamage, float attackSpeed, ToolMaterial material, Tag<Block> effectiveBlocks, Settings settings) {
+        super(attackDamage, attackSpeed, material, effectiveBlocks, settings);
     }
-
 
 
 
@@ -30,12 +36,5 @@ public class CreeperHeartItem extends Item {
         world.spawnEntity(tntEntity);
 
         return super.canMine(state, world, pos, miner);
-    }
-
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        System.out.println("Creeper Heart Used!");
-
-        return super.use(world, user, hand);
     }
 }

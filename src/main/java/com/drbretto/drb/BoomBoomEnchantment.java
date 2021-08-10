@@ -17,6 +17,8 @@ public class BoomBoomEnchantment extends Enchantment {
         return 1;
     }
 
+
+
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
 

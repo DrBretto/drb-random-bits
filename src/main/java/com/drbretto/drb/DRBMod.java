@@ -9,10 +9,7 @@ import net.minecraft.block.Material;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -30,6 +27,7 @@ public class DRBMod implements ModInitializer {
 	public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier("drb", "group"), () -> new ItemStack(DRBMod.CREEPER_HEART));
 
 	public static final Item CREEPER_HEART = new CreeperHeartItem(new Item.Settings().group(GROUP).maxCount(32));
+	//public static final Item BOOM_STICK = new BoomStick(12f, 12f, 2, );
 
 	public static final Block GUNPOWDER_BLOCK = new GunpowderBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).luminance(15));
 	public static final Item GUNPOWDER_BLOCK_ITEM = new BlockItem(GUNPOWDER_BLOCK, new Item.Settings().group(GROUP));
