@@ -18,8 +18,6 @@ public class CreeperHeartItem extends Item {
     }
 
 
-
-
     @Override
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
 
