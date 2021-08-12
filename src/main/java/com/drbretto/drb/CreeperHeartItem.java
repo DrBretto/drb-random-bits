@@ -18,17 +18,7 @@ public class CreeperHeartItem extends Item {
     }
 
 
-    @Override
-    public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
 
-        TntEntity tntEntity = EntityType.TNT.create(world);
-        tntEntity.setFuse(0);
-        tntEntity.setPos(pos.getX(), pos.getY(), pos.getZ());
-
-        world.spawnEntity(tntEntity);
-
-        return super.canMine(state, world, pos, miner);
-    }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {

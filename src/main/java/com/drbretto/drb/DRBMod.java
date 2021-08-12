@@ -1,5 +1,6 @@
 package com.drbretto.drb;
 
+import com.drbretto.drb.armor.ModArmorMaterials;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -32,6 +33,12 @@ public class DRBMod implements ModInitializer {
 	public static final Block GUNPOWDER_BLOCK = new GunpowderBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).luminance(15));
 	public static final Item GUNPOWDER_BLOCK_ITEM = new BlockItem(GUNPOWDER_BLOCK, new Item.Settings().group(GROUP));
 
+	public static final Item GUNPOWDER_HELMET = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.HEAD, new Item.Settings().group(GROUP));
+	public static final Item GUNPOWDER_CHESTPLATE = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.CHEST, new Item.Settings().group(GROUP));
+	public static final Item GUNPOWDER_LEGGINGS = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.LEGS, new Item.Settings().group(GROUP));
+	public static final Item GUNPOWDER_BOOTS = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.FEET, new Item.Settings().group(GROUP));
+
+
 
 	@Override
 	public void onInitialize() {
@@ -44,6 +51,12 @@ public class DRBMod implements ModInitializer {
 
 		Registry.register( Registry.ENCHANTMENT, new Identifier(MOD_ID, "boom_boom"), BOOM_BOOM);
 
+		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_helmet"), GUNPOWDER_HELMET);
+		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_chestplate"), GUNPOWDER_CHESTPLATE);
+		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_leggings"), GUNPOWDER_LEGGINGS);
+		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_boots"), GUNPOWDER_BOOTS);
+
 		System.out.println("Hello Fabric world!");
+
 	}
 }
