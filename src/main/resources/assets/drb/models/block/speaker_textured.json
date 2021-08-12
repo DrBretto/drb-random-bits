@@ -1,0 +1,156 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+    "textures": {
+        "gunpowder_block": "drb:block/gunpowder_block",
+        "speaker": "drb:block/speaker",
+        "magenta_e": "drb:block/magenta_e"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Base",
+            "from": [ 0, 0, 0 ], 
+            "to": [ 16, 1, 16 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 16, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 16, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 16, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 16, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Color Band",
+            "from": [ 1, 1, 1 ], 
+            "to": [ 15, 2, 15 ], 
+            "faces": {
+                "north": { "texture": "#magenta_e", "uv": [ 0, 0, 14, 1 ] },
+                "east": { "texture": "#magenta_e", "uv": [ 0, 0, 14, 1 ] },
+                "south": { "texture": "#magenta_e", "uv": [ 0, 0, 14, 1 ] },
+                "west": { "texture": "#magenta_e", "uv": [ 0, 0, 14, 1 ] }
+            }
+        },
+        {
+            "name": "Center",
+            "from": [ 6, 3, 6 ], 
+            "to": [ 10, 6, 10 ], 
+            "faces": {
+                "north": { "texture": "#gunpowder_block", "uv": [ 0, 0, 4, 3 ] },
+                "east": { "texture": "#gunpowder_block", "uv": [ 0, 0, 4, 3 ] },
+                "south": { "texture": "#gunpowder_block", "uv": [ 0, 0, 4, 3 ] },
+                "west": { "texture": "#gunpowder_block", "uv": [ 0, 0, 4, 3 ] },
+                "up": { "texture": "#gunpowder_block", "uv": [ 0, 0, 4, 4 ] }
+            }
+        },
+        {
+            "name": "Speaker Mid",
+            "from": [ 4, 4, 4 ], 
+            "to": [ 12, 5, 12 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 8, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 8, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 8, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 8, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 8, 8 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 8, 8 ] }
+            }
+        },
+        {
+            "name": "Speaker N",
+            "from": [ 3, 5, 2 ], 
+            "to": [ 13, 6, 4 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 2, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 2, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 10, 2 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 10, 2 ] }
+            }
+        },
+        {
+            "name": "Speaker S",
+            "from": [ 3, 5, 12 ], 
+            "to": [ 13, 6, 14 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 2, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 2, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 10, 2 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 10, 2 ] }
+            }
+        },
+        {
+            "name": "Speaker W",
+            "from": [ 2, 5, 3 ], 
+            "to": [ 4, 6, 13 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 2, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 2, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 2, 10 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 2, 10 ] }
+            }
+        },
+        {
+            "name": "Speaker E",
+            "from": [ 12, 5, 3 ], 
+            "to": [ 14, 6, 13 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 2, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 2, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 2, 10 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 2, 10 ] }
+            }
+        },
+        {
+            "name": "Base2",
+            "from": [ 0, 2, 0 ], 
+            "to": [ 16, 3, 16 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 16, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 16, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 16, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 16, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 16, 16 ] }
+            }
+        }
+    ]
+}
