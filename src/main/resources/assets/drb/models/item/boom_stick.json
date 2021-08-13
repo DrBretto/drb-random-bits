@@ -1,0 +1,68 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+    "textures": {
+        "gunpowder_block": "drb:block/gunpowder_block",
+        "speaker": "drb:block/speaker"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 90, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 5, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 341, 0, 44 ],
+            "translation": [ 4, -1.5, 3 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 245, 186, 126 ],
+            "translation": [ 1, 1.5, -1 ],
+            "scale": [ 0.53, 0.53, 0.53 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Cube",
+            "from": [ 7, 7, 0 ], 
+            "to": [ 9, 9, 16 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 1, 5, 3, 7 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 9, 16, 11 ] },
+                "south": { "texture": "#speaker", "uv": [ 8, 8, 10, 10 ] },
+                "west": { "texture": "#speaker", "uv": [ 1, 0, 16, 2 ] },
+                "up": { "texture": "#speaker", "uv": [ 8, 0, 10, 16 ] },
+                "down": { "texture": "#speaker", "uv": [ 3, 0, 5, 16 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 6.5, 6.5, -3 ], 
+            "to": [ 9.5, 9.5, 0 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "z", "angle": -45.0 },
+            "faces": {
+                "north": { "texture": "#gunpowder_block", "uv": [ 6, 1, 9, 4 ] },
+                "east": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 3 ] },
+                "south": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 3 ] },
+                "west": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 3 ] },
+                "up": { "texture": "#gunpowder_block", "uv": [ 9, 6, 12, 9 ] },
+                "down": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 3 ] }
+            }
+        }
+    ]
+}
