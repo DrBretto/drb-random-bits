@@ -1,0 +1,141 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+    "textures": {
+        "gunpowder_block": "drb:block/gunpowder_block",
+        "speaker": "drb:block/speaker",
+        "speaker_center": "drb:block/speaker_center",
+        "iron_block": "drb:block/iron_block",
+        "magenta": "drb:block/magenta"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 90, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 5, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 2.5, 3 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 180, 180, 180 ],
+            "translation": [ 1, 1.5, 5 ],
+            "scale": [ 1, 1, 1.3 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Nozzle-B",
+            "from": [ 6.5, 6.5, 0 ], 
+            "to": [ 9.5, 7.5, 5 ], 
+            "faces": {
+                "north": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 1 ] },
+                "east": { "texture": "#gunpowder_block", "uv": [ 0, 0, 5, 1 ] },
+                "south": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 1 ] },
+                "west": { "texture": "#gunpowder_block", "uv": [ 0, 0, 5, 1 ] },
+                "up": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 5 ] },
+                "down": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 5 ] }
+            }
+        },
+        {
+            "name": "Nozzle-T",
+            "from": [ 6.5, 8.5, 0 ], 
+            "to": [ 9.5, 9.5, 5 ], 
+            "faces": {
+                "north": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 1 ] },
+                "east": { "texture": "#gunpowder_block", "uv": [ 0, 0, 5, 1 ] },
+                "south": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 1 ] },
+                "west": { "texture": "#gunpowder_block", "uv": [ 0, 0, 5, 1 ] },
+                "up": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 5 ] },
+                "down": { "texture": "#gunpowder_block", "uv": [ 0, 0, 3, 5 ] }
+            }
+        },
+        {
+            "name": "Nozzle-W",
+            "from": [ 6.5, 7.5, 0 ], 
+            "to": [ 7.5, 8.5, 5 ], 
+            "faces": {
+                "north": { "texture": "#magenta", "uv": [ 0, 0, 1, 1 ] },
+                "south": { "texture": "#magenta", "uv": [ 0, 0, 1, 1 ] },
+                "west": { "texture": "#magenta", "uv": [ 0, 0, 5, 1 ] }
+            }
+        },
+        {
+            "name": "Nozzle-E",
+            "from": [ 8.5, 7.5, 0 ], 
+            "to": [ 9.5, 8.5, 5 ], 
+            "faces": {
+                "north": { "texture": "#magenta", "uv": [ 0, 0, 1, 1 ] },
+                "east": { "texture": "#magenta", "uv": [ 0, 0, 5, 1 ] },
+                "south": { "texture": "#magenta", "uv": [ 0, 0, 1, 1 ] }
+            }
+        },
+        {
+            "name": "Barrel",
+            "from": [ 7, 7, -5 ], 
+            "to": [ 9, 9, 16 ], 
+            "faces": {
+                "north": { "texture": "#iron_block", "uv": [ 6, 7, 8, 9 ] },
+                "east": { "texture": "#iron_block", "uv": [ 0, 2, 16, 4 ] },
+                "west": { "texture": "#iron_block", "uv": [ 0, 14, 16, 16 ] },
+                "up": { "texture": "#iron_block", "uv": [ 4, 0, 6, 16 ] },
+                "down": { "texture": "#iron_block", "uv": [ 0, 0, 2, 21 ] }
+            }
+        },
+        {
+            "name": "Butt",
+            "from": [ 6.5, 6.5, 16 ], 
+            "to": [ 9.5, 9.5, 19 ], 
+            "faces": {
+                "north": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] },
+                "east": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 3, 3 ] },
+                "west": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] },
+                "up": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] },
+                "down": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] }
+            }
+        },
+        {
+            "name": "Butt",
+            "from": [ 6.5, 6.5, 16 ], 
+            "to": [ 9.5, 9.5, 19 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "z", "angle": 45.0 },
+            "faces": {
+                "north": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] },
+                "east": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 3, 3 ] },
+                "west": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] },
+                "up": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] },
+                "down": { "texture": "#speaker_center", "uv": [ 0, 0, 3, 3 ] }
+            }
+        },
+        {
+            "name": "Trigger",
+            "from": [ 7.5, 4.5, 3 ], 
+            "to": [ 8.5, 6.5, 4 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 1, 2 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 1, 2 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 1, 2 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 1, 2 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 1, 1 ] }
+            }
+        }
+    ]
+}

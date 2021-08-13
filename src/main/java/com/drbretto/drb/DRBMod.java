@@ -29,6 +29,7 @@ public class DRBMod implements ModInitializer {
 
 	public static final Item CREEPER_HEART = new CreeperHeartItem(new Item.Settings().group(GROUP).maxCount(32));
 	public static final Item BOOM_STICK = new BoomStick(new Item.Settings().group(GROUP));
+	public static final Item MINING_BAZOOKA = new MiningBazooka(new Item.Settings().group(GROUP));
 
 	public static final Block GUNPOWDER_BLOCK = new GunpowderBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).luminance(15));
 	public static final Item GUNPOWDER_BLOCK_ITEM = new BlockItem(GUNPOWDER_BLOCK, new Item.Settings().group(GROUP));
@@ -45,6 +46,8 @@ public class DRBMod implements ModInitializer {
 
 		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "creeper_heart"), CREEPER_HEART);
 		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "boom_stick"), BOOM_STICK);
+		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "mining_bazooka"), MINING_BAZOOKA);
+
 		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_block"), GUNPOWDER_BLOCK_ITEM);
 
 		Registry.register( Registry.BLOCK, new Identifier(MOD_ID, "gunpowder_block"), GUNPOWDER_BLOCK);
