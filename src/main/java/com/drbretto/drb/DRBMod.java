@@ -44,9 +44,9 @@ public class DRBMod implements ModInitializer {
 	public static final Item GUNPOWDER_BOOTS = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.FEET, new Item.Settings().group(GROUP));
 
 
-
 	@Override
 	public void onInitialize() {
+
 
 		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "creeper_heart"), CREEPER_HEART);
 		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "boom_stick"), BOOM_STICK);
