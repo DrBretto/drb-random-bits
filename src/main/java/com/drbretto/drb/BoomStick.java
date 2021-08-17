@@ -14,14 +14,11 @@ public class BoomStick extends Item {
         super(settings);
     }
 
-    public void tick() {
-
-    }
 
     @Override
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
 
-        world.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 8.0F, Explosion.DestructionType.BREAK);
+        world.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 5.0F, Explosion.DestructionType.BREAK);
 
         return super.canMine(state, world, pos, miner);
     }

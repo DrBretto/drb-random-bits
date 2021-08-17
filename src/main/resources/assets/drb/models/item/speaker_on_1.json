@@ -1,0 +1,184 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+    "textures": {
+        "gunpowder_block": "drb:block/gunpowder_block",
+        "speaker": "drb:block/speaker",
+        "redstone_on": "drb:block/redstone_on",
+        "iron_block": "drb:block/iron_block",
+        "magenta_e": "drb:block/magenta_e"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Base",
+            "from": [ 0, 0, 0 ], 
+            "to": [ 16, 1, 16 ], 
+            "faces": {
+                "north": { "texture": "#gunpowder_block", "uv": [ 0, 10, 16, 11 ] },
+                "east": { "texture": "#gunpowder_block", "uv": [ 0, 9, 16, 10 ] },
+                "south": { "texture": "#gunpowder_block", "uv": [ 0, 9, 16, 10 ] },
+                "west": { "texture": "#gunpowder_block", "uv": [ 0, 9, 16, 10 ] },
+                "up": { "texture": "#gunpowder_block", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#gunpowder_block", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Color Band",
+            "from": [ 0.5, 1, 0.5 ], 
+            "to": [ 15.5, 2, 15.5 ], 
+            "faces": {
+                "north": { "texture": "#magenta_e", "uv": [ 0, 0, 15, 1 ] },
+                "east": { "texture": "#magenta_e", "uv": [ 0, 0, 15, 1 ] },
+                "south": { "texture": "#magenta_e", "uv": [ 0, 0, 15, 1 ] },
+                "west": { "texture": "#magenta_e", "uv": [ 0, 0, 15, 1 ] },
+                "up": { "texture": "#magenta_e", "uv": [ 0, 0, 15, 15 ] }
+            }
+        },
+        {
+            "name": "Center",
+            "from": [ 6, 3, 6 ], 
+            "to": [ 10, 6, 10 ], 
+            "faces": {
+                "north": { "texture": "#iron_block", "uv": [ 0, 0, 4, 3 ] },
+                "east": { "texture": "#iron_block", "uv": [ 0, 0, 4, 3 ] },
+                "south": { "texture": "#iron_block", "uv": [ 0, 0, 4, 3 ] },
+                "west": { "texture": "#iron_block", "uv": [ 0, 0, 4, 3 ] },
+                "up": { "texture": "#iron_block", "uv": [ 0, 0, 4, 4 ] }
+            }
+        },
+        {
+            "name": "Speaker Mid",
+            "from": [ 4, 4, 4 ], 
+            "to": [ 12, 5, 12 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 8, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 8, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 8, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 8, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 8, 8 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 8, 8 ] }
+            }
+        },
+        {
+            "name": "Speaker N",
+            "from": [ 3, 5, 1 ], 
+            "to": [ 13, 6, 4 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 3, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 3, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 10, 3 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 10, 3 ] }
+            }
+        },
+        {
+            "name": "Speaker S",
+            "from": [ 3, 5, 12 ], 
+            "to": [ 13, 6, 15 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 3, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 3, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 10, 3 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 10, 3 ] }
+            }
+        },
+        {
+            "name": "Speaker W",
+            "from": [ 1, 5, 3 ], 
+            "to": [ 4, 6, 13 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 3, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 3, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 3, 10 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 3, 10 ] }
+            }
+        },
+        {
+            "name": "Speaker E",
+            "from": [ 12, 5, 3 ], 
+            "to": [ 15, 6, 13 ], 
+            "faces": {
+                "north": { "texture": "#speaker", "uv": [ 0, 0, 3, 1 ] },
+                "east": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "south": { "texture": "#speaker", "uv": [ 0, 0, 3, 1 ] },
+                "west": { "texture": "#speaker", "uv": [ 0, 0, 10, 1 ] },
+                "up": { "texture": "#speaker", "uv": [ 0, 0, 3, 10 ] },
+                "down": { "texture": "#speaker", "uv": [ 0, 0, 3, 10 ] }
+            }
+        },
+        {
+            "name": "Antenna Stem",
+            "from": [ 7.5, 0, 7.5 ], 
+            "to": [ 8.5, 10, 8.5 ], 
+            "faces": {
+                "north": { "texture": "#iron_block", "uv": [ 1, 1, 2, 11 ] },
+                "east": { "texture": "#iron_block", "uv": [ 1, 4, 2, 14 ] },
+                "south": { "texture": "#iron_block", "uv": [ 1, 4, 2, 14 ] },
+                "west": { "texture": "#iron_block", "uv": [ 1, 2, 2, 12 ] },
+                "up": { "texture": "#iron_block", "uv": [ 0, 0, 1, 1 ] }
+            }
+        },
+        {
+            "name": "Antenna Tip",
+            "from": [ 7, 9, 7 ], 
+            "to": [ 9, 11, 9 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45.0 },
+            "faces": {
+                "north": { "texture": "#redstone_on", "uv": [ 8, 13, 10, 15 ] },
+                "east": { "texture": "#redstone_on", "uv": [ 2, 10, 4, 12 ] },
+                "south": { "texture": "#redstone_on", "uv": [ 8, 13, 10, 15 ] },
+                "west": { "texture": "#redstone_on", "uv": [ 5, 2, 7, 4 ] },
+                "up": { "texture": "#redstone_on", "uv": [ 3, 4, 5, 6 ] },
+                "down": { "texture": "#redstone_on", "uv": [ 8, 2, 10, 4 ] }
+            }
+        },
+        {
+            "name": "Base",
+            "from": [ 1, 2, 1 ], 
+            "to": [ 15, 3, 15 ], 
+            "faces": {
+                "north": { "texture": "#gunpowder_block", "uv": [ 0, 10, 14, 11 ] },
+                "east": { "texture": "#gunpowder_block", "uv": [ 0, 9, 16, 10 ] },
+                "south": { "texture": "#gunpowder_block", "uv": [ 0, 9, 14, 10 ] },
+                "west": { "texture": "#gunpowder_block", "uv": [ 0, 9, 14, 10 ] },
+                "up": { "texture": "#gunpowder_block", "uv": [ 0, 0, 14, 14 ] }
+            }
+        }
+    ]
+}

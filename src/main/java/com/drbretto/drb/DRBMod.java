@@ -3,7 +3,6 @@ package com.drbretto.drb;
 import com.drbretto.drb.armor.ModArmorMaterials;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -16,56 +15,56 @@ import net.minecraft.util.registry.Registry;
 
 public class DRBMod implements ModInitializer {
 
-	public static final String MOD_ID = "drb";
+    public static final String MOD_ID = "drb";
 
-	public static final Enchantment BOOM_BOOM = new BoomBoomEnchantment(
-			Enchantment.Rarity.RARE,
-			EnchantmentTarget.WEAPON,
-			new EquipmentSlot[] {
-					EquipmentSlot.MAINHAND
-			});
+    public static final Enchantment BOOM_BOOM = new BoomBoomEnchantment(
+            Enchantment.Rarity.RARE,
+            EnchantmentTarget.WEAPON,
+            new EquipmentSlot[]{
+                    EquipmentSlot.MAINHAND
+            });
 
-	public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier("drb", "group"), () -> new ItemStack(DRBMod.CREEPER_HEART));
+    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier("drb", "group"), () -> new ItemStack(DRBMod.CREEPER_HEART));
 
-	public static final Item CREEPER_HEART = new CreeperHeartItem(new Item.Settings().group(GROUP).maxCount(32));
-	public static final Item BOOM_STICK = new BoomStick(new Item.Settings().group(GROUP));
+    public static final Item CREEPER_HEART = new CreeperHeartItem(new Item.Settings().group(GROUP).maxCount(32));
+    public static final Item BOOM_STICK = new BoomStick(new Item.Settings().group(GROUP));
 
-	public static final Item MINING_BAZOOKA = new MiningBazooka(new Item.Settings().group(GROUP));
+    public static final Item MINING_BAZOOKA = new MiningBazooka(new Item.Settings().group(GROUP));
 
-	public static final Block MINING_BAZOOKA_BLOCK = new MiningBazookaBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT));
-	public static final Item MINING_BAZOOKA_BLOCK_ITEM = new BlockItem(MINING_BAZOOKA_BLOCK, new Item.Settings().group(GROUP));
+    public static final Block SPEAKER = new Speaker(FabricBlockSettings.of(Material.WOOD).nonOpaque());
+    public static final Item SPEAKER_ITEM = new BlockItem(SPEAKER, new Item.Settings().group(GROUP));
 
-	public static final Block GUNPOWDER_BLOCK = new GunpowderBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).luminance(15));
-	public static final Item GUNPOWDER_BLOCK_ITEM = new BlockItem(GUNPOWDER_BLOCK, new Item.Settings().group(GROUP));
+    public static final Block GUNPOWDER_BLOCK = new GunpowderBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).luminance(15));
+    public static final Item GUNPOWDER_BLOCK_ITEM = new BlockItem(GUNPOWDER_BLOCK, new Item.Settings().group(GROUP));
 
-	public static final Item GUNPOWDER_HELMET = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.HEAD, new Item.Settings().group(GROUP));
-	public static final Item GUNPOWDER_CHESTPLATE = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.CHEST, new Item.Settings().group(GROUP));
-	public static final Item GUNPOWDER_LEGGINGS = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.LEGS, new Item.Settings().group(GROUP));
-	public static final Item GUNPOWDER_BOOTS = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.FEET, new Item.Settings().group(GROUP));
-
-
-	@Override
-	public void onInitialize() {
+    public static final Item GUNPOWDER_HELMET = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.HEAD, new Item.Settings().group(GROUP));
+    public static final Item GUNPOWDER_CHESTPLATE = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.CHEST, new Item.Settings().group(GROUP));
+    public static final Item GUNPOWDER_LEGGINGS = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.LEGS, new Item.Settings().group(GROUP));
+    public static final Item GUNPOWDER_BOOTS = new ArmorItem(ModArmorMaterials.GUNPOWDER, EquipmentSlot.FEET, new Item.Settings().group(GROUP));
 
 
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "creeper_heart"), CREEPER_HEART);
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "boom_stick"), BOOM_STICK);
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "mining_bazooka"), MINING_BAZOOKA);
+    @Override
+    public void onInitialize() {
 
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_block"), GUNPOWDER_BLOCK_ITEM);
-		Registry.register( Registry.BLOCK, new Identifier(MOD_ID, "gunpowder_block"), GUNPOWDER_BLOCK);
 
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "mining_bazooka_block_item"), MINING_BAZOOKA_BLOCK_ITEM);
-		Registry.register( Registry.BLOCK, new Identifier(MOD_ID, "mining_bazooka_block"), MINING_BAZOOKA_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "creeper_heart"), CREEPER_HEART);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "boom_stick"), BOOM_STICK);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mining_bazooka"), MINING_BAZOOKA);
 
-		Registry.register( Registry.ENCHANTMENT, new Identifier(MOD_ID, "boom_boom"), BOOM_BOOM);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gunpowder_block"), GUNPOWDER_BLOCK_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "gunpowder_block"), GUNPOWDER_BLOCK);
 
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_helmet"), GUNPOWDER_HELMET);
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_chestplate"), GUNPOWDER_CHESTPLATE);
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_leggings"), GUNPOWDER_LEGGINGS);
-		Registry.register( Registry.ITEM, new Identifier(MOD_ID, "gunpowder_boots"), GUNPOWDER_BOOTS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "speaker"), SPEAKER_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "speaker"), SPEAKER);
 
-		System.out.println("Hello Fabric world!");
+        Registry.register(Registry.ENCHANTMENT, new Identifier(MOD_ID, "boom_boom"), BOOM_BOOM);
 
-	}
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gunpowder_helmet"), GUNPOWDER_HELMET);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gunpowder_chestplate"), GUNPOWDER_CHESTPLATE);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gunpowder_leggings"), GUNPOWDER_LEGGINGS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gunpowder_boots"), GUNPOWDER_BOOTS);
+
+        System.out.println("Hello Fabric world!");
+
+    }
 }
