@@ -20,16 +20,18 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 public abstract class LivingEntityMixin extends Entity {
 
-    @Shadow @Final private DefaultedList<ItemStack> equippedArmor;
+    @Shadow
+    @Final
+    private DefaultedList<ItemStack> equippedArmor;
 
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
     }
 
-    @Inject(at = @At("HEAD"),method="tick")
-    private void tick(CallbackInfo ci){
+    @Inject(at = @At("HEAD"), method = "tick")
+    private void tick(CallbackInfo ci) {
 
-        if(isOnFire()) {
+        if (isOnFire()) {
             ItemStack helmetStack = equippedArmor.get(3);
             ItemStack chestplateStack = equippedArmor.get(2);
             ItemStack leggingsStack = equippedArmor.get(1);
@@ -37,27 +39,26 @@ public abstract class LivingEntityMixin extends Entity {
 
             int explosionCount = 0;
 
-            if(helmetStack.getItem().equals(DRBMod.GUNPOWDER_HELMET)){
+            if (helmetStack.getItem().equals(DRBMod.GUNPOWDER_HELMET)) {
                 explosionCount++;
             }
-            if(chestplateStack.getItem().equals(DRBMod.GUNPOWDER_CHESTPLATE)){
+            if (chestplateStack.getItem().equals(DRBMod.GUNPOWDER_CHESTPLATE)) {
                 explosionCount++;
             }
-            if(leggingsStack.getItem().equals(DRBMod.GUNPOWDER_LEGGINGS)){
+            if (leggingsStack.getItem().equals(DRBMod.GUNPOWDER_LEGGINGS)) {
                 explosionCount++;
             }
-            if(bootsStack.getItem().equals(DRBMod.GUNPOWDER_BOOTS)){
+            if (bootsStack.getItem().equals(DRBMod.GUNPOWDER_BOOTS)) {
                 explosionCount++;
             }
 
-            System.out.println("Standing in fire" + helmetStack);
+            System.out.println("on fire" + explosionCount + helmetStack + chestplateStack + leggingsStack + bootsStack);
 
-            if(explosionCount > 0){
+            if (explosionCount > 0) {
 
 
-
-                for (int i =0; i < explosionCount; i++) {
-                    world.createExplosion(null,this.prevX, this.prevY, this.prevZ, 4.0F, Explosion.DestructionType.BREAK);
+                for (int i = 0; i < explosionCount; i++) {
+                    world.createExplosion(null, this.prevX, this.prevY, this.prevZ, 4.0F, Explosion.DestructionType.BREAK);
 
                 }
             }
